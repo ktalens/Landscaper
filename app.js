@@ -1,5 +1,4 @@
-var dollars = 4;
-var scissors =false;
+var dollars = 0;
 var toolbox = ["teeth"];
 
 let moneyItem = document.getElementById("money");
@@ -73,18 +72,33 @@ const store = [
 
 const status = () =>
     {
-        
-        let remainingTools = 
+        let remainingTools=[]
         store.forEach((thing,index) =>
             {
                 if (thing.quantity >0)
                 {
-                    console.log(thing.item+" is still available")
+                    remainingTools.push(thing.item)
                 }
             }
             );
         console.log("You have $"+dollars);
-        
+        console.log(remainingTools);
+        let remainingQuantities=[]
+        store.forEach((thing,index) =>
+            {
+                remainingQuantities.push(thing.quantity)
+            }
+        );
+        availableTools=remainingQuantities.reduce(
+                (total,value) =>
+                {
+                    return total-value;
+                }
+            );
+        if (dollars===1000 && availableTools===0)
+                {
+                    alert("CONGRATULATIONS YOU WON")
+                }
     };
 
 let storeShelf = document.getElementById("storeShelf");
