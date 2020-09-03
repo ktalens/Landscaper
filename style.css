@@ -1,0 +1,18 @@
+body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+div {
+
+    justify-content: center;
+    align-items: center;
+}
+#toolbox {
+    border-style: solid;
+
+}
+#money {
+    border-style: solid;
+    
+}
