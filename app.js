@@ -35,6 +35,7 @@ const toolboxUpdate = () =>
                         {
                             dollars+= store[index-1].earningPower;
                             moneyUpdate();
+                            status();
                         }
                 }
         }
@@ -55,18 +56,29 @@ const store = [
         price: 25,
         quantity: 1,
         earningPower: 50
+    },
+    {
+        item: "fancy battery lawnmower",
+        price: 250,
+        quantity: 1,
+        earningPower: 100
     }
 ];
 
 const status = () =>
     {
-        if (dollars >= 5) 
-        {
-            console.log("You can buy a pair of rusty scissors!");
-             
-        } else {
-            console.log("You only have $"+dollars);
-        }
+        
+        let remainingTools = 
+        store.forEach((thing,index) =>
+            {
+                if (thing.quantity >0)
+                {
+                    console.log(thing.item+" is still available")
+                }
+            }
+            );
+        console.log("You have $"+dollars);
+        
     };
 
 let storeShelf = document.getElementById("storeShelf");
@@ -85,7 +97,6 @@ const storeUpdate = ()=>{
                 stockItem.onclick=function()
                     {
                     if (dollars>= thing.price&&thing.quantity>0) {
-                        console.log("Hi");
                         thing.quantity -=1;
                         toolbox.push(thing.item);
                         dollars -= thing.price;
