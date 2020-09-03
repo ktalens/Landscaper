@@ -7,12 +7,18 @@ div {
 
     justify-content: center;
     align-items: center;
-}
-#toolbox {
     border-style: solid;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+li button{
+    display: block;
 
 }
-#money {
-    border-style: solid;
-    
+
+.buy-me {
+    color:red;
 }
