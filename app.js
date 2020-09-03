@@ -62,6 +62,12 @@ const store = [
         price: 250,
         quantity: 1,
         earningPower: 100
+    },
+    {
+        item: "team of starving students",
+        price: 500,
+        quantity: 1,
+        earningPower: 250
     }
 ];
 
