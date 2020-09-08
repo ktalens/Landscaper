@@ -1,24 +1,67 @@
 body {
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    background-image:url("https://cdna.artstation.com/p/assets/images/images/017/050/204/large/ryan-o-connor-tileable-grass.jpg?1554433722");
+    background-position: contain;
 }
 div {
-
     justify-content: center;
     align-items: center;
     border-style: solid;
+    margin: 10% auto;
+    padding: 2% auto;
+    background-color: rgba(126, 126, 126, 0.76);
+    width:75%;
+}
+#toolbox {
+    display: inline-table;
+    margin: 0 10px 0;
+    width: 40%;
+}
+#toolbox button{
+    display: grid;
+    margin: 10px auto 15px;
+}
+#money {
+    display: inline-table;
+    margin: 0;
+    width: 40%;
+}
+.store {
+    padding: 5% 5% 5% 5%;
+}
+ul {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 20px;
+    padding: 40px;
 }
 
 li {
-    display: inline-block;
-    margin: 20px;
+    height: 100px;
+    max-height: 150px;
+    width:200px;
+    max-width: 300px;
+    margin: 10px 20px 10px 0;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+    list-style-type: none;
+    justify-self: center;
 }
 li button{
-    display: block;
-
+    margin: 85px auto;
+    width:60%;
 }
 
-.buy-me {
-    color:red;
+.buyme[id="pair of rusty scissors"] {
+    background-image:url("https://cdna.artstation.com/p/assets/images/images/022/613/706/large/leticia-moeller-tesoura.jpg?1576077227");
+}
+.buyme[id="push lawnmower"] {
+    background-image:url("https://cdnb.artstation.com/p/assets/images/images/020/556/131/large/danny-matthews-lawn-mower3.jpg?1568228973");
+}
+.buyme[id="fancy battery lawnmower"] {
+    background-image:url("https://cdnb.artstation.com/p/assets/images/images/025/503/979/large/stanislav-sivachek-screenshot032.jpg?1586005239");
+}
+.buyme[id="team of starving students"] {
+    background-image:url("https://cdna.artstation.com/p/assets/images/images/010/861/700/large/yuepeng-chen-735-cd-lineup-r.jpg?1526604043");
 }
